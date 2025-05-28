@@ -36,7 +36,7 @@ public class UsersScreen extends AppCompatActivity implements UserAdapter.OnItem
         super.onCreate(savedInstanceState);
         binding = ActivityUsersScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        // loading
         showProgressDialog();
         getUsers();
     }
