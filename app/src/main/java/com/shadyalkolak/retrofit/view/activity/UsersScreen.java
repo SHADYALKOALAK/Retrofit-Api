@@ -60,6 +60,7 @@ public class UsersScreen extends AppCompatActivity implements UserAdapter.OnItem
                     binding.rvUsers.setLayoutManager(new LinearLayoutManager(context));
                     binding.rvUsers.setAdapter(adapter);
                 } else {
+                    Toast.makeText(context, "حدث خطاء", Toast.LENGTH_SHORT).show();
                     Toast.makeText(context, "لم يتم تحميل البيانات بنجاح", Toast.LENGTH_SHORT).show();
                 }
             }
