@@ -74,17 +74,18 @@ public class UsersScreen extends AppCompatActivity implements UserAdapter.OnItem
 
     @Override
     public void onItemClick(UserModel user, int position, ClickType clickType) {
+        Intent intent;
         switch (clickType) {
             case ITEM:
                 Toast.makeText(context, "تم الضغط على العنصر", Toast.LENGTH_SHORT).show();
                 break;
             case WEBSITE:
                 String url = "https://" + user.getWebsite();
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                context.startActivity(browserIntent);
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                context.startActivity(intent);
                 break;
             case CALL:
-                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + user.getPhone()));
                 context.startActivity(intent);
                 break;
