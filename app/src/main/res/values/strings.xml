@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Retrofit</string>
+    <string name="json_placeholder">Json Placeholder</string>
+</resources>
