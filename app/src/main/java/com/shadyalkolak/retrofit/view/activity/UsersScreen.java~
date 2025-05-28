@@ -30,13 +30,13 @@ public class UsersScreen extends AppCompatActivity implements UserAdapter.OnItem
     private final Context context = UsersScreen.this;
     private List<UserModel> users;
     private ProgressDialog progressDialog;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityUsersScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        // loading
         showProgressDialog();
         getUsers();
     }
