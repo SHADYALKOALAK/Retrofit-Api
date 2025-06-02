@@ -78,7 +78,8 @@ public class UsersScreen extends AppCompatActivity implements UserAdapter.OnItem
         Intent intent;
         switch (clickType) {
             case ITEM:
-                Toast.makeText(context, "تم الضغط على العنصر", Toast.LENGTH_SHORT).show();
+                intent = new Intent(context, MainAlbumsAndPostsLayout.class);
+                context.startActivity(intent);
                 break;
             case WEBSITE:
                 String url = "https://" + user.getWebsite();
