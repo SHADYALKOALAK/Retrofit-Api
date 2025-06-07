@@ -2,6 +2,7 @@ package com.shadyalkolak.retrofit.network;
 
 import com.shadyalkolak.retrofit.models.AlbumsModel;
 import com.shadyalkolak.retrofit.models.CommentsModel;
+import com.shadyalkolak.retrofit.models.PhotosModel;
 import com.shadyalkolak.retrofit.models.PostsModel;
 import com.shadyalkolak.retrofit.models.UserModel;
 
@@ -27,6 +28,9 @@ public interface ApiClient {
 
     @GET(ApiService.END_POINT_COMMENTS_BY_POST_ID)
     Call<List<CommentsModel>> getAllCommentsByPostId(@Path("id") int postId);
+
+    @GET(ApiService.END_POINT_PHOTOS)
+    Call<List<PhotosModel>> getAllPhotos();
 
 
 }
